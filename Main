@@ -1,0 +1,33 @@
+package pass_Validator;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Password password = new Password();
+
+        System.out.println("User: johndoe");
+        System.out.println("Password: ABC_1234");
+        System.out.println("");
+
+        System.out.println("Your new password must:");
+        System.out.println("* have at least 8 characters long");
+        System.out.println("* contain a special character or number");
+        System.out.println("* not contain the username");
+        System.out.println("* not be the same old password");
+        System.out.println("");
+        System.out.println("Type a new password:");
+        String pass = scanner.next();
+        password.setPassword(pass);
+        password.verifyPassword();
+
+        System.out.println("");
+        System.out.println("Updating...");
+        System.out.println("");
+        System.out.println("User: johndoe");
+        System.out.println("Password: " + pass);
+    }
+}
